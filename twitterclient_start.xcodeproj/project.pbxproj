@@ -62,11 +62,11 @@
 			isa = PBXGroup;
 			children = (
 				ACD402F81CFAA3FC00787242 /* twitterBridge.m */,
+				ACD402F71CFAA3FB00787242 /* twitterclient_start-Bridging-Header.h */,
 				C718320B1C7268CE000CCA5C /* twitterclient_start */,
 				C718320A1C7268CE000CCA5C /* Products */,
 				7043E23562649662ABD381EE /* Pods */,
 				45783C24ACCB50171AA1E3BE /* Frameworks */,
-				ACD402F71CFAA3FB00787242 /* twitterclient_start-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
