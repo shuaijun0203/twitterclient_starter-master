@@ -106,6 +106,7 @@ class ViewController: UICollectionViewController, UICollectionViewDelegateFlowLa
             }
         }
         return CGSizeMake(view.frame.width, 80)
+        //wwww
     }
 
 }
