@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "twitterclient_start/ViewController.swift"
+            timestampString = "486231242.038928"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "134"
+            endingLineNumber = "134"
+            landmarkName = "StatusCell"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "twitterclient_start.StatusCell.homeStatus.didset : Swift.Optional&lt;twitterclient_start.HomeStatus&gt;"
+                  moduleName = "twitterclient_start"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/guest/Downloads/twitterclient_starter-master/twitterclient_start/ViewController.swift"
+                  timestampString = "486194504.120264"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "108"
+                  endingLineNumber = "108"
+                  offsetFromSymbolStart = "508">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "twitterclient_start.StatusCell.(homeStatus.didset : Swift.Optional&lt;twitterclient_start.HomeStatus&gt;).(closure #1)"
+                  moduleName = "twitterclient_start"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/guest/Downloads/twitterclient_starter-master/twitterclient_start/ViewController.swift"
+                  timestampString = "486194504.120532"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "110"
+                  endingLineNumber = "110"
+                  offsetFromSymbolStart = "52">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
