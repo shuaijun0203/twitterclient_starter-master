@@ -36,7 +36,7 @@ class ViewController: UICollectionViewController, UICollectionViewDelegateFlowLa
         
         twitterAPI.verifyCredentialsWithUserSuccessBlock({ (username, userId) in
             
-            print(username + " ##$$ " + userId)
+            print(username + "  " + userId)
             
             twitterAPI.getHomeTimelineSinceID(nil, count: 1, successBlock: { (statuses) in
                 print("##### \(statuses)")
