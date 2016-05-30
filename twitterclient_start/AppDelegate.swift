@@ -2,8 +2,8 @@
 //  AppDelegate.swift
 //  twitterclient_start
 //
-//  Created by Brian Voong on 2/15/16.
-//  Copyright © 2016 letsbuildthatapp. All rights reserved.
+//  Created by guest on H28/05/29.
+//  Copyright © 平成28年 letsbuildthatapp. All rights reserved.
 //
 
 import UIKit

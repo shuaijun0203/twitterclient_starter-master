@@ -2,8 +2,8 @@
 //  ViewController.swift
 //  twitterclient_start
 //
-//  Created by Brian Voong on 2/15/16.
-//  Copyright © 2016 letsbuildthatapp. All rights reserved.
+//  Created by guest on H28/05/29.
+//  Copyright © 平成28年 letsbuildthatapp. All rights reserved.
 //
 
 import UIKit
@@ -36,7 +36,7 @@ class ViewController: UICollectionViewController, UICollectionViewDelegateFlowLa
         
         twitterAPI.verifyCredentialsWithUserSuccessBlock({ (username, userId) in
             
-            twitterAPI.getHomeTimelineSinceID(nil, count: 20, successBlock: { (statuses) in
+            twitterAPI.getHomeTimelineSinceID(nil, count: 100, successBlock: { (statuses) in
 //                print(statuses)
                 
                 self.homeStatuses = [HomeStatus]()
@@ -94,7 +94,7 @@ class ViewController: UICollectionViewController, UICollectionViewDelegateFlowLa
         
         if let homeStatus = self.homeStatuses?[indexPath.item]{
             if let name = homeStatus.name ,screenName = homeStatus.screenName, text = homeStatus.text{
-                let attributedText = NSMutableAttributedString(string: (homeStatus.name)!, attributes: [NSFontAttributeName: UIFont.systemFontOfSize(14)])
+                let attributedText = NSMutableAttributedString(string: name, attributes: [NSFontAttributeName: UIFont.systemFontOfSize(14)])
                 
                 attributedText.appendAttributedString(NSAttributedString(string: "\n@\(screenName)", attributes: [NSFontAttributeName:UIFont.boldSystemFontOfSize(14)]))
                 
@@ -106,6 +106,7 @@ class ViewController: UICollectionViewController, UICollectionViewDelegateFlowLa
             }
         }
         return CGSizeMake(view.frame.width, 80)
+
     }
 
 }
@@ -114,21 +115,21 @@ class StatusCell: UICollectionViewCell {
     
     var homeStatus: HomeStatus? {
         didSet{
+            if let name = homeStatus?.name ,screenName = homeStatus?.screenName, text = homeStatus?.text{
+                let attributedText = NSMutableAttributedString(string: name, attributes: [NSFontAttributeName: UIFont.systemFontOfSize(14)])
+                
+                attributedText.appendAttributedString(NSAttributedString(string: "\n@\(screenName)", attributes: [NSFontAttributeName:UIFont.boldSystemFontOfSize(14)]))
+                
+                attributedText.appendAttributedString(NSAttributedString(string: "\n\(text)", attributes: [NSFontAttributeName: UIFont.systemFontOfSize(12)]))
+                
+                
+                statusTextView.attributedText = attributedText
+                
+                
+            }
             if let profileImageURL = homeStatus?.profileImageUrl {
                 
-                if let name = homeStatus?.name ,screenName = homeStatus?.screenName, text = homeStatus?.text{
-                    let attributedText = NSMutableAttributedString(string: (homeStatus?.name)!, attributes: [NSFontAttributeName: UIFont.systemFontOfSize(14)])
-                    
-                    attributedText.appendAttributedString(NSAttributedString(string: "\n@\(screenName)", attributes: [NSFontAttributeName:UIFont.boldSystemFontOfSize(14)]))
-                    
-                    attributedText.appendAttributedString(NSAttributedString(string: "\n\(text)", attributes: [NSFontAttributeName: UIFont.systemFontOfSize(12)]))
-                    
-                        
-                    statusTextView.attributedText = attributedText
-                    
-                    
-                }
-                
+
                 let url = NSURL(string: profileImageURL)
                 
                 NSURLSession.sharedSession().dataTaskWithURL(url!, completionHandler: { (data, response, error) in
